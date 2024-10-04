@@ -481,7 +481,9 @@ class SvgAssetLoader extends SvgLoader<ByteData> {
       );
     } catch (e) {
       // Handle loading error, log it, or rethrow it
-      print('Error loading asset: $e');
+      if (kDebugMode) {
+        print('Error loading asset: $e');
+      }
       return null;
     }
   }
@@ -562,12 +564,16 @@ class SvgNetworkLoader extends SvgLoader<Uint8List> {
         return response.bodyBytes;
       } else {
         // Handle non-200 responses appropriately
-        print('Failed to load SVG from $url: ${response.statusCode}');
+        if (kDebugMode) {
+          print('Failed to load SVG from $url: ${response.statusCode}');
+        }
         return null;
       }
     } catch (e) {
       // Handle network errors, log them
-      print('Error loading SVG from $url: $e');
+      if (kDebugMode) {
+        print('Error loading SVG from $url: $e');
+      }
       return null;
     } finally {
       if (_httpClient == null) {

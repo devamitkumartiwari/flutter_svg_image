@@ -1,4 +1,4 @@
-# ✨ flutter_svg_image
+# ✨ svg_image_flutter
 
 ## 🎖 Installing
 
@@ -6,4 +6,4 @@
 
 ```yaml
 dependencies:
-  flutter_svg_image: ^0.0.1
+  svg_image_flutter: ^0.0.1

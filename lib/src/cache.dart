@@ -62,9 +62,6 @@ class FlutterSvgCache {
     Object key,
     Future<ByteData> Function() loader,
   ) {
-    assert(key != null);
-    assert(loader != null);
-
     // Return pending result if the loader is already called.
     if (_pending.containsKey(key)) {
       return _pending[key]!;

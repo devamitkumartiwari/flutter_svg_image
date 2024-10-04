@@ -1,4 +1,4 @@
-name: flutter_svg_image
+name: svg_image_flutter
 description: An SVG rendering and widget library for Flutter inspired by , which allows painting and displaying Scalable Vector Graphics 1.1 files.
 repository: https://github.com/devamitkumartiwari/flutter_svg_image
 version: 0.0.1
@@ -21,5 +21,5 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^4.0.0
 
-#flutter:
+
 

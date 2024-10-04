@@ -171,7 +171,7 @@ class FlutterSvgImage extends StatelessWidget {
   /// If [excludeFromSemantics] is true, then [semanticsLabel] will be ignored.
   FlutterSvgImage.asset(
     String assetName, {
-    Key? key,
+    super.key,
     this.matchTextDirection = false,
     AssetBundle? bundle,
     String? package,
@@ -195,8 +195,7 @@ class FlutterSvgImage extends StatelessWidget {
           assetBundle: bundle,
           theme: theme,
         ),
-        colorFilter = colorFilter ?? _getColorFilter(color, colorBlendMode),
-        super(key: key);
+        colorFilter = colorFilter ?? _getColorFilter(color, colorBlendMode);
 
   /// Creates a widget that displays an SVG obtained from the network.
   ///
@@ -232,7 +231,7 @@ class FlutterSvgImage extends StatelessWidget {
   /// If [excludeFromSemantics] is true, then [semanticsLabel] will be ignored.
   FlutterSvgImage.network(
     String url, {
-    Key? key,
+    super.key,
     Map<String, String>? headers,
     this.width,
     this.height,
@@ -256,8 +255,7 @@ class FlutterSvgImage extends StatelessWidget {
           theme: theme,
           httpClient: httpClient,
         ),
-        colorFilter = colorFilter ?? _getColorFilter(color, colorBlendMode),
-        super(key: key);
+        colorFilter = colorFilter ?? _getColorFilter(color, colorBlendMode);
 
   /// Creates a widget that displays an SVG obtained from a [File].
   ///
@@ -291,7 +289,7 @@ class FlutterSvgImage extends StatelessWidget {
   /// If [excludeFromSemantics] is true, then [semanticsLabel] will be ignored.
   FlutterSvgImage.file(
     File file, {
-    Key? key,
+    super.key,
     this.width,
     this.height,
     this.fit = BoxFit.contain,
@@ -308,8 +306,7 @@ class FlutterSvgImage extends StatelessWidget {
     SvgTheme? theme,
     @Deprecated("") bool cacheColorFilter = false,
   })  : bytesLoader = SvgFileLoader(file, theme: theme),
-        colorFilter = colorFilter ?? _getColorFilter(color, colorBlendMode),
-        super(key: key);
+        colorFilter = colorFilter ?? _getColorFilter(color, colorBlendMode);
 
   /// Creates a widget that displays an SVG obtained from a [Uint8List].
   ///
@@ -340,7 +337,7 @@ class FlutterSvgImage extends StatelessWidget {
   /// If [excludeFromSemantics] is true, then [semanticsLabel] will be ignored.
   FlutterSvgImage.memory(
     Uint8List bytes, {
-    Key? key,
+    super.key,
     this.width,
     this.height,
     this.fit = BoxFit.contain,
@@ -357,8 +354,7 @@ class FlutterSvgImage extends StatelessWidget {
     SvgTheme? theme,
     @Deprecated("") bool cacheColorFilter = false,
   })  : bytesLoader = SvgBytesLoader(bytes, theme: theme),
-        colorFilter = colorFilter ?? _getColorFilter(color, colorBlendMode),
-        super(key: key);
+        colorFilter = colorFilter ?? _getColorFilter(color, colorBlendMode);
 
   /// Creates a widget that displays an SVG obtained from a [String].
   ///
@@ -389,7 +385,7 @@ class FlutterSvgImage extends StatelessWidget {
   /// If [excludeFromSemantics] is true, then [semanticsLabel] will be ignored.
   FlutterSvgImage.string(
     String string, {
-    Key? key,
+    super.key,
     this.width,
     this.height,
     this.fit = BoxFit.contain,
@@ -406,8 +402,7 @@ class FlutterSvgImage extends StatelessWidget {
     SvgTheme? theme,
     @Deprecated("") bool cacheColorFilter = false,
   })  : bytesLoader = SvgStringLoader(string, theme: theme),
-        colorFilter = colorFilter ?? _getColorFilter(color, colorBlendMode),
-        super(key: key);
+        colorFilter = colorFilter ?? _getColorFilter(color, colorBlendMode);
 
   static ColorFilter? _getColorFilter(
           ui.Color? color, ui.BlendMode colorBlendMode) =>

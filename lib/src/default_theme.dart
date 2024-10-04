@@ -8,10 +8,10 @@ class DefaultSvgTheme extends InheritedTheme {
   /// Creates a default SVG theme for the given subtree
   /// using the provided [theme].
   const DefaultSvgTheme({
-    Key? key,
-    required Widget child,
+    super.key,
+    required super.child,
     required this.theme,
-  }) : super(key: key, child: child);
+  });
 
   /// The SVG theme to apply.
   final SvgTheme theme;
@@ -41,7 +41,6 @@ class DefaultSvgTheme extends InheritedTheme {
     );
   }
 
-  @override
   Widget build(BuildContext context) {
     // The inherited widget doesn't provide build context but can be used for overriding behavior.
     return child; // Ensure that the child widget is returned in the build.

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg_image/flutter_svg.dart';
+import 'package:svg_image_flutter/flutter_svg_image.dart';
 
 String bubbles = '''
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="428" height="213" viewBox="0 0 428 213">
